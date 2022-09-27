@@ -1,0 +1,162 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body {
+
+    background-color: rgb(246, 233, 233);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    margin: 30px auto;
+    padding: 0px 0px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.grid {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hs1(0, 0%, 100%);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card_content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img img {
+    max-width: 100%;
+    display: inherit;
+}
+
+h2 {
+    font-family: 'Fraunces', sans-serif;
+
+    font-size: 1.9rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+}
+
+p {
+    color: gray;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+
+}
+
+h6 {
+    letter-spacing: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: gray;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+}
+
+.small_price {
+    font-family: 'Fraunces', sans-serif;
+    color: hsl(158, 36%, 37%);
+    font-size: 32px;
+    margin-right: 25px;
+}
+
+.btn {
+
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    background-color: hsl(158, 48%, 38%);
+    border-style: none;
+    height: 45px;
+    width: 240px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1a4031;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 628px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card_content {
+        display: block;
+        padding: 20px;
+    }
+
+    .container {
+        padding: 0px 15px;
+    }
+
+    .img img {
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    h2,
+    h6,
+    p,
+    .ptice {
+        padding-bottom: 23px;
+    }
+
+    @media screen and (max-width: 376px) {
+        .container {
+            margin: 30px auto;
+            
+        }
+
+        .img img {
+            max-height: 280px;
+        }
+
+        h2,
+        h6,
+        p,
+        .price {
+            padding-bottom: 16px;
+        }
+
+    }
+}
